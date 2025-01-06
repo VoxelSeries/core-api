@@ -1,0 +1,10 @@
+dependencies {
+    compileOnlyApi(projects.loader)
+    compileOnlyApi(libs.paperApi)
+    compileOnlyApi("org.spongepowered:math:2.0.1")
+    compileOnlyApi(fileTree(project.rootDir.toPath().resolve("lib")))
+    compileOnlyApi("dev.oop778:keyed-instances:1.0.1")
+    compileOnlyApi("ch.obermuhlner:big-math:2.3.2")
+    compileOnlyApi("com.github.Redempt:Crunch:2.0.3")
+    compileOnlyApi("com.google.inject:guice:7.0.0")
+}
