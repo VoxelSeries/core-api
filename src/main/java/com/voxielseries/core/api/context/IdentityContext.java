@@ -1,5 +1,6 @@
 package com.voxielseries.core.api.context;
 
+import dev.oop778.bindings.type.Bindable;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -7,7 +8,7 @@ import org.jetbrains.annotations.Nullable;
  * It can be used for players, groups, etc.
  * @param <TARGET>
  */
-public interface IdentityContext<TARGET> {
+public interface IdentityContext<TARGET> extends Bindable {
 
     @Nullable
     TARGET target();
@@ -17,4 +18,6 @@ public interface IdentityContext<TARGET> {
     <T> T get(IdentityContextKey<T> key);
 
     <T> T set(IdentityContextKey<T> key, T value);
+
+    <T> T setWeak(IdentityContextKey<T> key, T value);
 }
