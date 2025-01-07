@@ -8,7 +8,7 @@ import org.bukkit.event.inventory.InventoryEvent;
 import org.bukkit.event.player.PlayerEvent;
 import org.bukkit.event.world.WorldEvent;
 
-public interface SpigotEvents {
+public interface SpigotEventGroup {
     AtomEventGroup<Event> ROOT = AtomEventObjectFactory.get().createEventGroup(Event.class);
     AtomEventGroup<EntityEvent> ENTITY = ROOT.subGroup(EntityEvent.class);
     AtomEventGroup<PlayerEvent> PLAYER = ROOT.subGroup(PlayerEvent.class);
