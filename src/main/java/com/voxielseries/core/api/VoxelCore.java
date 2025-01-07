@@ -1,13 +1,17 @@
 package com.voxielseries.core.api;
 
-import com.voxielseries.core.api.event.VoxelEventBus;
+import com.voxielseries.core.api.event.VoxelEventDirector;
 import com.voxielseries.core.api.player.IdentityContextPlayerManager;
 import lombok.NonNull;
+import net.kyori.adventure.audience.Audience;
+import org.incendo.cloud.CommandManager;
 
 public interface VoxelCore {
     IdentityContextPlayerManager playerManager();
 
-    VoxelEventBus eventBus();
+    VoxelEventDirector eventBus();
+
+    CommandManager<Audience> commandManager();
 
     static VoxelCore get() {
         return Instance.INSTANCE;
