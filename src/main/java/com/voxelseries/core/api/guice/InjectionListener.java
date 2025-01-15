@@ -1,4 +1,4 @@
-package com.voxielseries.core.api.guice;
+package com.voxelseries.core.api.guice;
 
 public interface InjectionListener {
     void postInject();

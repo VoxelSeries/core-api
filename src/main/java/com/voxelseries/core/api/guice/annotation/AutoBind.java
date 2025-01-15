@@ -1,4 +1,4 @@
-package com.voxielseries.core.api.annotation;
+package com.voxelseries.core.api.guice.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

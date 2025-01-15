@@ -1,6 +1,6 @@
-package com.voxielseries.core.api.variable;
+package com.voxelseries.core.api.variable;
 
-import com.voxielseries.core.api.context.IdentityContext;
+import com.voxelseries.core.api.context.IdentityContext;
 import lombok.NonNull;
 import org.intellij.lang.annotations.Pattern;
 

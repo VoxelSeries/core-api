@@ -1,15 +1,14 @@
-package com.voxielseries.core.api.context;
+package com.voxelseries.core.api.context;
 
-import dev.oop778.bindings.type.Bindable;
 import org.jetbrains.annotations.Nullable;
 
 /**
  * Used to get the target of an identity
  * It can be used for players, groups, etc.
+ *
  * @param <TARGET>
  */
-public interface IdentityContext<TARGET> extends Bindable {
-
+public interface IdentityContext<TARGET> {
     @Nullable
     TARGET target();
 

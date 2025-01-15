@@ -1,21 +1,30 @@
-package com.voxielseries.core.api;
+package com.voxelseries.core.api;
 
-import com.voxielseries.core.api.event.VoxelEventDirector;
-import com.voxielseries.core.api.player.IdentityContextPlayerManager;
+import com.voxelseries.core.api.config.VoxelConfigs;
+import com.voxelseries.core.api.event.VoxelEventDirector;
+import dev.oop778.keyedinstances.api.KeyedRegistry;
 import lombok.NonNull;
 import net.kyori.adventure.audience.Audience;
 import org.incendo.cloud.CommandManager;
 
+import java.nio.file.Path;
+
 public interface VoxelCore {
-    IdentityContextPlayerManager playerManager();
-
-    VoxelEventDirector eventBus();
-
-    CommandManager<Audience> commandManager();
-
     static VoxelCore get() {
         return Instance.INSTANCE;
     }
+
+    VoxelEventDirector eventDirector();
+
+    CommandManager<? extends Audience> commandManager();
+
+    Path getDirectory();
+
+    VoxelConfigs configs();
+
+    VoxelObjectFactories objectFactory();
+
+    KeyedRegistry keyedRegistry();
 
     class Instance {
         protected static VoxelCore INSTANCE;
