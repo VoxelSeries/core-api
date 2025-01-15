@@ -1,6 +1,6 @@
-package com.voxielseries.core.api.module.annotation;
+package com.voxelseries.core.api.module.annotation;
 
 public @interface VoxelModuleDependency {
-    String name();
+    String value();
     String version() default "*";
 }
