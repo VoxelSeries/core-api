@@ -22,7 +22,7 @@ public interface VoxelCore {
 
     VoxelConfigs configs();
 
-    VoxelObjectFactories objectFactory();
+    VoxelObjectFactory objectFactory();
 
     KeyedRegistry keyedRegistry();
 
